@@ -7,6 +7,9 @@
         "role" : "Admin"
     },
     {
+        "role" : "SuperAdmin"
+    },
+    {
         "role" : "User"
     }]
 }
