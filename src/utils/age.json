@@ -1,0 +1,10 @@
+{
+    "age": [
+        { "age": "Bebe",
+            "range": "0-6"},
+        { "age": "Joven",
+        "range": "6-8"},
+        { "age": "Adulto",
+        "range": ">12 meses"}
+    ]
+}

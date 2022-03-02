@@ -1,0 +1,34 @@
+{
+    "temperaments":
+    [{
+        "nombre": "Activo"
+      },
+      {
+        "nombre": "Divertido"
+      },
+      {
+        "nombre": "Fiel"
+      },
+      {
+        "nombre": "Independiente"
+      },
+      {
+        "nombre": "Perezoso"
+      },
+      {
+        "nombre": "Tranquilo"
+      },
+      {
+        "nombre": "Amigable"
+      },
+      {
+        "nombre": "Inteligente"
+      },
+      {
+        "nombre": "Docil"
+      },
+      {
+        "nombre": "Valiente"
+      }
+    ]
+}

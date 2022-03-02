@@ -1,0 +1,80 @@
+[
+    {
+        "question": "Nombre y apellido"
+    },
+    {
+        "question": "Numero de celular"
+    },
+    {
+        "question": "Edad"
+    },
+    {
+        "question": "Localidad/Bario"
+    },
+    {
+        "question": "Direccion completa (timbre/piso)"
+    },
+    {
+        "question": "¿Ya transitaste alguna vez? "
+    },
+    {
+        "question": "¿Tenes red de protección de piso a techo en tu casa? Ventanas/ balcón o patio con medianeras altas"
+    },
+    {
+        "question": "¿Tenes otros animales en tu casa? ¿Cuántos? ¿Están castrados? "
+    },
+    {
+        "question": "¿Cuántas personas viven en tu casa? Especificar edades ¿ Todos están de acuerdo con ser hogar de tránsito ? "
+    },
+    {
+        "question": "¿En que parte de tu hogar pensas transitar?"
+    },
+    {
+        "question": "¿Querés transitar perros o gatos?"
+    },
+    {
+        "question": "¿Cuántos perros/gatos podes transitar a la vez? "
+    },
+    {
+        "question": "¿Cuántas horas pasaría solo? "
+    },
+    {
+        "question": "Esta en tus posibilidades hacerte cargo de sus gastos de... (elegí las opciones): Alimento, desparasitante, piedritas, otro "
+    },
+    {
+        "question": "En caso de que la mascota necesite recibir alguna medicación, ¿podes darle en los horarios que corresponda? "
+    },
+    {
+        "question": "¿Por cuanto tiempo podrias transitar ?"
+    },
+    {
+        "question": "¿Como es tu vivienda? 1)casa con patio/terraza; 2)casa sin patio; 3)Departamento con balcón/patio; 4)Deparamento sin espacio abierto"
+    },
+    {
+        "question": "¿Sos propietario o inquilino ?  "
+    },
+    {
+        "question": "En el caso de tener jardín,balcón, terraza ¿Hay posibilidad de escape?"
+    },
+    {
+        "question": "¿El animal viviría en interiores o exteriores? ¿ En que momentos? ¿Donde dormiría? "
+    },
+    {
+        "question": "¿Estás al tanto del gasto que lleva tener una mascota? (Vacunas, atención veterinaria, un buen alimento y chapita identificatoria) "
+    },
+    {
+        "question": "Los primeros meses de adaptación el perro puede llorar, romper cosas, hacer sus necesidades en cualquier lugar. ¿Considerás esto un impedimento?"
+    },
+    {
+        "question": "¿Sos propietario o inquilino ?  "
+    },
+    {
+        "question": "¿estás de acuerdo con la esterilización animal? ¿Lo castrarías? "
+    },
+    {
+        "question": "¿Sos consciente de que la adopción es para toda la vida? Más allá de separaciones, mudanzas, viajes, enfermedades y/o futuros hijos. "
+    },
+    {
+        "question": "¿Qué alimento balanceado tenés pensado darle? "
+    }
+]

@@ -1,0 +1,619 @@
+{ 
+  "states": [
+  {
+    "id": 1596,
+    "id_country": 89,
+    "name": "Amazonas"
+  },
+  {
+    "id": 1597,
+    "id_country": 89,
+    "name": "Ancash"
+  },
+  {
+    "id": 1598,
+    "id_country": 89,
+    "name": "Apurímac"
+  },
+  {
+    "id": 1599,
+    "id_country": 89,
+    "name": "Arequipa"
+  },
+  {
+    "id": 1600,
+    "id_country": 89,
+    "name": "Ayacucho"
+  },
+  {
+    "id": 1601,
+    "id_country": 89,
+    "name": "Cajamarca"
+  },
+  {
+    "id": 1602,
+    "id_country": 89,
+    "name": "Callao"
+  },
+  {
+    "id": 1603,
+    "id_country": 89,
+    "name": "Cusco"
+  },
+  {
+    "id": 1604,
+    "id_country": 89,
+    "name": "Huancavelica"
+  },
+  {
+    "id": 1605,
+    "id_country": 89,
+    "name": "Huánuco"
+  },
+  {
+    "id": 1606,
+    "id_country": 89,
+    "name": "Ica"
+  },
+  {
+    "id": 1607,
+    "id_country": 89,
+    "name": "Junín"
+  },
+  {
+    "id": 1608,
+    "id_country": 89,
+    "name": "La Libertad"
+  },
+  {
+    "id": 1609,
+    "id_country": 89,
+    "name": "Lambayeque"
+  },
+  {
+    "id": 1610,
+    "id_country": 89,
+    "name": "Lima"
+  },
+  {
+    "id": 1611,
+    "id_country": 89,
+    "name": "Loreto"
+  },
+  {
+    "id": 1612,
+    "id_country": 89,
+    "name": "Madre de Dios"
+  },
+  {
+    "id": 1613,
+    "id_country": 89,
+    "name": "Moquegua"
+  },
+  {
+    "id": 1614,
+    "id_country": 89,
+    "name": "Pasco"
+  },
+  {
+    "id": 1615,
+    "id_country": 89,
+    "name": "Piura"
+  },
+  {
+    "id": 1616,
+    "id_country": 89,
+    "name": "Puno"
+  },
+  {
+    "id": 1617,
+    "id_country": 89,
+    "name": "San Martín"
+  },
+  {
+    "id": 1618,
+    "id_country": 89,
+    "name": "Tacna"
+  },
+  {
+    "id": 1619,
+    "id_country": 89,
+    "name": "Tumbes"
+  },
+  {
+    "id": 1620,
+    "id_country": 89,
+    "name": "Ucayali"
+  },
+  {
+    "id": 1699,
+    "id_country": 82,
+    "name": "Amazonas"
+  },
+  {
+    "id": 1700,
+    "id_country": 82,
+    "name": "Antioquia"
+  },
+  {
+    "id": 1701,
+    "id_country": 82,
+    "name": "Arauca"
+  },
+  {
+    "id": 1702,
+    "id_country": 82,
+    "name": "Atlántico"
+  },
+  {
+    "id": 1703,
+    "id_country": 82,
+    "name": "Caquetá"
+  },
+  {
+    "id": 1704,
+    "id_country": 82,
+    "name": "Cauca"
+  },
+  {
+    "id": 1705,
+    "id_country": 82,
+    "name": "César"
+  },
+  {
+    "id": 1706,
+    "id_country": 82,
+    "name": "Chocó"
+  },
+  {
+    "id": 1707,
+    "id_country": 82,
+    "name": "Córdoba"
+  },
+  {
+    "id": 1708,
+    "id_country": 82,
+    "name": "Guaviare"
+  },
+  {
+    "id": 1709,
+    "id_country": 82,
+    "name": "Guainía"
+  },
+  {
+    "id": 1710,
+    "id_country": 82,
+    "name": "Huila"
+  },
+  {
+    "id": 1711,
+    "id_country": 82,
+    "name": "La Guajira"
+  },
+  {
+    "id": 1712,
+    "id_country": 82,
+    "name": "Meta"
+  },
+  {
+    "id": 1713,
+    "id_country": 82,
+    "name": "Narino"
+  },
+  {
+    "id": 1714,
+    "id_country": 82,
+    "name": "Norte de Santander"
+  },
+  {
+    "id": 1715,
+    "id_country": 82,
+    "name": "Putumayo"
+  },
+  {
+    "id": 1716,
+    "id_country": 82,
+    "name": "Quindío"
+  },
+  {
+    "id": 1717,
+    "id_country": 82,
+    "name": "Risaralda"
+  },
+  {
+    "id": 1718,
+    "id_country": 82,
+    "name": "San Andrés y Providencia"
+  },
+  {
+    "id": 1719,
+    "id_country": 82,
+    "name": "Santander"
+  },
+  {
+    "id": 1720,
+    "id_country": 82,
+    "name": "Sucre"
+  },
+  {
+    "id": 1721,
+    "id_country": 82,
+    "name": "Tolima"
+  },
+  {
+    "id": 1722,
+    "id_country": 82,
+    "name": "Valle del Cauca"
+  },
+  {
+    "id": 1723,
+    "id_country": 82,
+    "name": "Vaupés"
+  },
+  {
+    "id": 1724,
+    "id_country": 82,
+    "name": "Vichada"
+  },
+  {
+    "id": 1725,
+    "id_country": 82,
+    "name": "Casanare"
+  },
+  {
+    "id": 1726,
+    "id_country": 82,
+    "name": "Cundinamarca"
+  },
+  {
+    "id": 1727,
+    "id_country": 82,
+    "name": "Distrito Capital"
+  },
+  {
+    "id": 1730,
+    "id_country": 82,
+    "name": "Caldas"
+  },
+  {
+    "id": 1731,
+    "id_country": 82,
+    "name": "Magdalena"
+  },
+  {
+    "id": 1733,
+    "id_country": 42,
+    "name": "Aguascalientes"
+  },
+  {
+    "id": 1734,
+    "id_country": 42,
+    "name": "Baja California"
+  },
+  {
+    "id": 1735,
+    "id_country": 42,
+    "name": "Baja California Sur"
+  },
+  {
+    "id": 1736,
+    "id_country": 42,
+    "name": "Campeche"
+  },
+  {
+    "id": 1737,
+    "id_country": 42,
+    "name": "Chiapas"
+  },
+  {
+    "id": 1738,
+    "id_country": 42,
+    "name": "Chihuahua"
+  },
+  {
+    "id": 1739,
+    "id_country": 42,
+    "name": "Coahuila de Zaragoza"
+  },
+  {
+    "id": 1740,
+    "id_country": 42,
+    "name": "Colima"
+  },
+  {
+    "id": 1741,
+    "id_country": 42,
+    "name": "Distrito Federal"
+  },
+  {
+    "id": 1742,
+    "id_country": 42,
+    "name": "Durango"
+  },
+  {
+    "id": 1743,
+    "id_country": 42,
+    "name": "Guanajuato"
+  },
+  {
+    "id": 1744,
+    "id_country": 42,
+    "name": "Guerrero"
+  },
+  {
+    "id": 1745,
+    "id_country": 42,
+    "name": "Hidalgo"
+  },
+  {
+    "id": 1746,
+    "id_country": 42,
+    "name": "Jalisco"
+  },
+  {
+    "id": 1747,
+    "id_country": 42,
+    "name": "México"
+  },
+  {
+    "id": 1748,
+    "id_country": 42,
+    "name": "Michoacán de Ocampo"
+  },
+  {
+    "id": 1749,
+    "id_country": 42,
+    "name": "Morelos"
+  },
+  {
+    "id": 1750,
+    "id_country": 42,
+    "name": "Nayarit"
+  },
+  {
+    "id": 1751,
+    "id_country": 42,
+    "name": "Nuevo León"
+  },
+  {
+    "id": 1752,
+    "id_country": 42,
+    "name": "Oaxaca"
+  },
+  {
+    "id": 1753,
+    "id_country": 42,
+    "name": "Puebla"
+  },
+  {
+    "id": 1754,
+    "id_country": 42,
+    "name": "Querétaro de Arteaga"
+  },
+  {
+    "id": 1755,
+    "id_country": 42,
+    "name": "Quintana Roo"
+  },
+  {
+    "id": 1756,
+    "id_country": 42,
+    "name": "San Luis Potosí"
+  },
+  {
+    "id": 1757,
+    "id_country": 42,
+    "name": "Sinaloa"
+  },
+  {
+    "id": 1758,
+    "id_country": 42,
+    "name": "Sonora"
+  },
+  {
+    "id": 1759,
+    "id_country": 42,
+    "name": "Tabasco"
+  },
+  {
+    "id": 1760,
+    "id_country": 42,
+    "name": "Tamaulipas"
+  },
+  {
+    "id": 1761,
+    "id_country": 42,
+    "name": "Tlaxcala"
+  },
+  {
+    "id": 1762,
+    "id_country": 42,
+    "name": "Veracruz-Llave"
+  },
+  {
+    "id": 1763,
+    "id_country": 42,
+    "name": "Yucatán"
+  },
+  {
+    "id": 1764,
+    "id_country": 42,
+    "name": "Zacatecas"
+  },
+  {
+    "id": 1777,
+    "id_country": 123,
+    "name": "Chuquisaca"
+  },
+  {
+    "id": 1778,
+    "id_country": 123,
+    "name": "Cochabamba"
+  },
+  {
+    "id": 1779,
+    "id_country": 123,
+    "name": "El Beni"
+  },
+  {
+    "id": 1780,
+    "id_country": 123,
+    "name": "La Paz"
+  },
+  {
+    "id": 1781,
+    "id_country": 123,
+    "name": "Oruro"
+  },
+  {
+    "id": 1782,
+    "id_country": 123,
+    "name": "Pando"
+  },
+  {
+    "id": 1783,
+    "id_country": 123,
+    "name": "Potosí"
+  },
+  {
+    "id": 1784,
+    "id_country": 123,
+    "name": "Santa Cruz"
+  },
+  {
+    "id": 1785,
+    "id_country": 123,
+    "name": "Tarija"
+  },
+  {
+    "id": 1818,
+    "id_country": 5,
+    "name": "Buenos Aires"
+  },
+  {
+    "id": 1819,
+    "id_country": 5,
+    "name": "Catamarca"
+  },
+  {
+    "id": 1820,
+    "id_country": 5,
+    "name": "Chaco"
+  },
+  {
+    "id": 1821,
+    "id_country": 5,
+    "name": "Chubut"
+  },
+  {
+    "id": 1822,
+    "id_country": 5,
+    "name": "Córdoba"
+  },
+  {
+    "id": 1823,
+    "id_country": 5,
+    "name": "Corrientes"
+  },
+  {
+    "id": 1824,
+    "id_country": 5,
+    "name": "Distrito Federal"
+  },
+  {
+    "id": 1825,
+    "id_country": 5,
+    "name": "Entre Ríos"
+  },
+  {
+    "id": 1826,
+    "id_country": 5,
+    "name": "Formosa"
+  },
+  {
+    "id": 1827,
+    "id_country": 5,
+    "name": "Jujuy"
+  },
+  {
+    "id": 1828,
+    "id_country": 5,
+    "name": "La Pampa"
+  },
+  {
+    "id": 1829,
+    "id_country": 5,
+    "name": "La Rioja"
+  },
+  {
+    "id": 1830,
+    "id_country": 5,
+    "name": "Mendoza"
+  },
+  {
+    "id": 1831,
+    "id_country": 5,
+    "name": "Misiones"
+  },
+  {
+    "id": 1832,
+    "id_country": 5,
+    "name": "Neuquén"
+  },
+  {
+    "id": 1833,
+    "id_country": 5,
+    "name": "Río Negro"
+  },
+  {
+    "id": 1834,
+    "id_country": 5,
+    "name": "Salta"
+  },
+  {
+    "id": 1835,
+    "id_country": 5,
+    "name": "San Juan"
+  },
+  {
+    "id": 1836,
+    "id_country": 5,
+    "name": "San Luis"
+  },
+  {
+    "id": 1837,
+    "id_country": 5,
+    "name": "Santa Cruz"
+  },
+  {
+    "id": 1838,
+    "id_country": 5,
+    "name": "Santa Fe"
+  },
+  {
+    "id": 1839,
+    "id_country": 5,
+    "name": "Santiago del Estero"
+  },
+  {
+    "id": 1840,
+    "id_country": 5,
+    "name": "Tierra del Fuego"
+  },
+  {
+    "id": 1841,
+    "id_country": 5,
+    "name": "Tucumán"
+  },
+  {
+    "id": 2202,
+    "id_country": 82,
+    "name": "Bolivar"
+  },
+  {
+    "id": 2203,
+    "id_country": 82,
+    "name": "Boyacá"
+  }
+]
+}

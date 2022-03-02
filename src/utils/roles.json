@@ -1,0 +1,12 @@
+{
+    "roles":
+    [{
+       "role" : "Shelter" 
+    },
+    {
+        "role" : "Admin"
+    },
+    {
+        "role" : "User"
+    }]
+}

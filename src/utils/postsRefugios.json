@@ -1,0 +1,102 @@
+{
+    "refugios": [
+        {
+            "id": 1,
+            "name": "Mascotas en Casa",
+            "address": "Reconquista 1085, B7513 Adolfo Gonzales Chaves, Provincia de Buenos Aires, Argentina",
+            "phoneNumber": "+541164048508",
+            "description": "Albergue de todo tipo de mascotas",
+            "email": "admin@mascotasencasa.com",
+            "password": "000101",
+            "userId": 4,
+            "cityId": 564794,
+            "role": 1
+        },
+        {
+            "id": 2,
+            "name": "Adopta una Mascota",
+            "address": "ALU, Bartolomé Mitre 946-964, X5184 Aguila Blanca, Córdoba, Argentina",
+            "phoneNumber": "+543541583294",
+            "description": "Albergue de todo tipo de mascotas",
+            "email": "user@adoptaunamascota.com",
+            "password": "000101",
+            "userId": 4,
+            "cityId": 564843,
+            "role": 1
+        },
+        {
+            "id": 3,
+            "name": "Refugio de tu Mejor Amigo",
+            "address": "Lazaro Cardenas esq. Callejon Libertad 15, Centro, 21400 Tecate, B.C.",
+            "phoneNumber": "+526656541539",
+            "description": "Refugio de tu Mejor Amigo",
+            "email": "user@tumejoramigo.com",
+            "password": "000101",
+            "userId": 4,
+            "cityId": 525151,
+            "role": 1
+        },
+        {
+            "id": 4,
+            "name": "Animalitos en Espera",
+            "address": "C. Libertad 116, Casco Urbano, 66230 San Pedro Garza García, N.L.",
+            "phoneNumber": "+528184004540",
+            "description": "Animalitos en Espera",
+            "email": "user@animalitosenespera.com",
+            "password": "000101",
+            "userId": 4,
+            "cityId": 521063,
+            "role": 1
+        },
+        {
+            "id": 5,
+            "name": "Nuevo Hogar",
+            "address": "Cuatro Bocas, Altomira, Atlantico, Colombia",
+            "phoneNumber": "+573104906375",
+            "description": "Nuevo Hogar",
+            "email": "user@nuevohogar.com",
+            "password": "000101",
+            "userId": 4,
+            "cityId": 451411,
+            "role": 1
+        },
+        
+        {
+            "id": 6,
+            "name": "Organización de Rescate de Vidas Animales",
+            "address": "Barrio Nuevo, Av 40, Puente El Maizaro - 10, Armadillo, Meta, Colombia",
+            "phoneNumber": "+5786707770",
+            "description": "Organización de Rescate de Vidas Animales",
+            "email": "user@rescatepets.com",
+            "password": "000101",
+            "userId": 4,
+            "cityId": 451741,
+            "role": 1
+        },
+        {
+            "id": 7,
+            "name": "Patitas Empolvadas",
+            "address": "Av. Simon Bolivar Calle Eslovaquia Urbanizacion Santa Cruz Unidad Vecinal 118, Bolivia",
+            "phoneNumber": "+59133555008",
+            "description": "Patitas Empolvadas",
+            "email": "user@patitasempolvadas.com",
+            "password": "000101",
+            "userId": 4,
+            "cityId": 538267,
+            "role": 1
+        },
+        {
+            "id": 8,
+            "name": "Animales Vulnerables",
+            "address": "Warnes 685 esquina, Oruro, Centro, Santa Cruz de la Sierra, Bolivia",  
+            "phoneNumber": "+59133327274",
+            "description": "Animales Vulnerables",
+            "email": "user@animalesvulnerables.com",
+            "password": "000101",
+            "userId": 4,
+            "cityId": 539889,
+            "role": 1
+        }
+        
+    ]
+}

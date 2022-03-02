@@ -1,0 +1,9 @@
+{
+  "countries": [
+    { "id": 5, "name": "Argentina","flag":"https://flagcdn.com/w320/ar.png"},
+    { "id": 123, "name": "Bolivia","flag":"https://flagcdn.com/w320/bo.png"},
+    { "id": 82, "name": "Colombia","flag":"https://flagcdn.com/w320/co.png" },
+    { "id": 42, "name": "Mexico","flag" :"https://flagcdn.com/w320/mx.png"},
+    { "id": 89, "name": "Peru","flag":"https://flagcdn.com/w320/pe.png" }
+  ]
+}

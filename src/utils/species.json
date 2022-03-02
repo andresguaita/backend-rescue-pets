@@ -1,0 +1,18 @@
+{
+    "species":
+    [{
+       "specie" : "Gato" 
+    },
+    {
+        "specie" : "Perro"
+    },
+    {
+        "specie" : "Pajaro"
+    },
+    {
+        "specie" : "Cerdo"
+    },
+    {
+        "specie" : "Otro"
+    }]
+}
