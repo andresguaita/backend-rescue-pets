@@ -4,7 +4,7 @@ exports.setFormStatus = async (req, res) => {
    let {status,formId,id} = req.body;
    
    try {   
-       await Adoptions.update({
+       let adop = await Adoptions.update({
            status:status
        },
            {where: 
@@ -12,7 +12,7 @@ exports.setFormStatus = async (req, res) => {
            formId:formId 
            }
        });
-       await Requests.update({
+       let req = await Requests.update({
            status:status
        },
            {where: 
@@ -20,7 +20,9 @@ exports.setFormStatus = async (req, res) => {
            formId:formId 
            }
        });
-      return res.status(200).json("Form edited successfully");
+       if(adop)return res.status(200).json(adop);
+       if(req)return res.status(200).json(req);
+       else return res.status(200).json("Form not edited");
    } catch (error) {
        console.log(error);
       return  res.json(error);
