@@ -6,6 +6,7 @@ exports.setRoles =  () => {
         roles.roles.forEach(async element => {
             await Roles.findOrCreate({
                 where: {
+                    id: element.id,
                     role : element.role 
                 }
             })
