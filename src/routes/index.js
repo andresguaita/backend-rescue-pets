@@ -23,6 +23,7 @@ const nodemailer = require('./nodemailer')
 const FollowUp = require('./FollowUp') 
 const Profile = require('./Profile')
 const FollowUpStatus = require('./FollowUpStatus')
+const createAdmin = require('./AdminUsers')
 
 router.use('/',pets)
 router.use('/',form)
@@ -48,5 +49,5 @@ router.use('/',nodemailer)
 router.use('/',FollowUp)
 router.use('/',Profile)
 router.use('/',FollowUpStatus)
-
+router.use('/',createAdmin)
 module.exports = router;

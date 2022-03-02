@@ -77,14 +77,18 @@ const { States } = sequelize.models;
 const { Genres } = sequelize.models;
 const { FollowUp } = sequelize.models;
 const { FollowUpStatus } = sequelize.models;
+const { Transaction } = sequelize.models;
 
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
 
 Species.hasMany(Pets);
 Shelter.hasMany(Pets);
+Shelter.hasMany(Transaction)
+Transaction.belongsTo(Shelter)
 Pets.belongsTo(Shelter);
 Pets.belongsTo(Species);
+
 
 //Relation Temperament-Pets
 Temperament.hasMany(Pets);

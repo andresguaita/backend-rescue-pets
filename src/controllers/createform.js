@@ -1,5 +1,6 @@
 const {Forms, Questions} = require('../db.js')//Requiero  model adoption para hacerle post
 const {Formtype} = require('../db.js')
+///comentario prueba
 exports.createForm = async (req,res) => {
     const {type,questions,idshelter} = req.body
     try{
