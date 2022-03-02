@@ -22,7 +22,15 @@ module.exports = (sequelize) => {
       },
       img: {
         type: DataTypes.STRING,
-      }
+      },
+      status: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: true
+      },
+      token: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
     }
   );
 };
