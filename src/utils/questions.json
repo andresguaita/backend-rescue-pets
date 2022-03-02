@@ -1,18 +1,6 @@
 [
     {
-        "question": "Nombre y apellido"
-    },
-    {
-        "question": "Numero de celular"
-    },
-    {
         "question": "Edad"
-    },
-    {
-        "question": "Localidad/Bario"
-    },
-    {
-        "question": "Direccion completa (timbre/piso)"
     },
     {
         "question": "¿Ya transitaste alguna vez? "
@@ -69,7 +57,7 @@
         "question": "¿Sos propietario o inquilino ?  "
     },
     {
-        "question": "¿estás de acuerdo con la esterilización animal? ¿Lo castrarías? "
+        "question": "¿Estás de acuerdo con la esterilización animal? ¿Lo castrarías? "
     },
     {
         "question": "¿Sos consciente de que la adopción es para toda la vida? Más allá de separaciones, mudanzas, viajes, enfermedades y/o futuros hijos. "
