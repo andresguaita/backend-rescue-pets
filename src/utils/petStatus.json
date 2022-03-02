@@ -1,13 +1,14 @@
 {
     "petstatus": [
         {
+            "id": 1,
             "status": "En adopcion"
         },
-        {
+        {   "id":2,
             "status": "Adoptado"
         },
-        {
-            "status": "En transito"
+        {   "id": 3,
+            "status": "En proceso"
         }
     ]
 }

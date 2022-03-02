@@ -6,6 +6,7 @@ exports.setPetStatus =  () => {
         petstatus.petstatus.forEach(async element => {
             await PetStatus.findOrCreate({
                 where: {
+                    id: element.id,
                     status : element.status
                 }
             })
