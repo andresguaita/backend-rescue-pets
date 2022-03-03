@@ -27,7 +27,7 @@ async function createAdmin(req, res=response) {
         if(User){
             return res.status(401).json({
                 ok:false,
-                msg: `Ya existe un usuario con el email ${email}`
+                msg: `Ya existe una cuenta de administrador con el email ${email}`
             })
         }
 
