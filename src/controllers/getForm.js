@@ -42,8 +42,8 @@ exports.getForm = async(req,res)=>{
                     }
                 })
                 if(requestsAnswers.length) return res.status(200).json(requestsAnswers)
-                else return res.status(400).send('not forms found')
-            }else return res.status(400).send('not forms found')
+                else return res.status(200).send('forms not found')
+            }else return res.status(200).send('forms not found')
         }catch(error){
             return error
         }    
