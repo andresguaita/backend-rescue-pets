@@ -2,7 +2,12 @@ const {Requests} = require('../db.js')//Requiero  model adoption para hacerle po
 exports.sendRequest = async (req,res) => {
     const {idform,answer, profileId} = req.body
     try{
-        if(idform && answer && profileId){
+        let alreadyExists = await Requests.findOne({
+            where:{
+                profileId : profileId
+            }
+        })
+        if(idform && answer && profileId && !alreadyExists){
             let requestCreated = await Requests.create({
                 answers : answer,
                 formId : idform,

@@ -2,7 +2,12 @@ const {Adoptions} = require('../db.js')//Requiero  model adoption para hacerle p
 exports.sendAdoption = async (req,res) => {
     const {idform,idpet,answer,profileId} = req.body
     try{
-        if(idform && idpet && answer){
+        let alreadyExists = await Adoptions.findOne({
+            where:{
+                profileId : profileId
+            }
+        })
+        if(idform && idpet && answer && !alreadyExists){
             let adoptionCreated = await Adoptions.create({
                 answers : answer,
                 formId : idform,
