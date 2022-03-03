@@ -12,16 +12,7 @@ exports.setFormStatus = async (req, res) => {
            formId:formId 
            }
        });
-       let req = await Requests.update({
-           status:status
-       },
-           {where: 
-           {id: id,
-           formId:formId 
-           }
-       });
-       if(adop)return res.status(200).json(adop);
-       if(req)return res.status(200).json(req);
+       if(adop)return res.status(200).json(adop)
        else return res.status(200).json("Form not edited");
    } catch (error) {
        console.log(error);
