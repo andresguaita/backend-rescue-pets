@@ -32,5 +32,5 @@ router.put('/editForm/:formid', editForm)
 
 router.get('/checkForm/:shelterid', checkForm)
 
-router.put('/setFormStatus', setFormStatus)
+router.put('/setFormStatus/:id/:formid/:status' , setFormStatus)
 module.exports = router
