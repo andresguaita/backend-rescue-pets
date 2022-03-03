@@ -8,6 +8,7 @@ const {
   Species,
   PetStatus,
   Shelter,
+  Genres
 } = require("../db");
 const { getSheltersByCity } = require("./getSheltersByCity");
 
@@ -27,7 +28,7 @@ exports.getPets = async (req, res = response) => {
   });
 
   const query = {
-    include: [Age, Temperament, Vaccines, Species, PetStatus, Shelter],
+    include: [Age, Temperament, Vaccines, Species, PetStatus, Shelter, Genres],
     where: { [Op.and]: where, shelterId: { [Op.in]: shelters } },
   };
 
