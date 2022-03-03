@@ -5,7 +5,7 @@ exports.sendEmailForms =  async (req, res) => {
         let {userMail, petName, ShelterName, type} = req.body;
 
     try {
-        if(type === 1){
+        if(type === 2){
             await transporter.sendMail({
                 from: `"Rescue Pets" <${EMAIL}> `,
                 to: userMail,
@@ -15,7 +15,7 @@ exports.sendEmailForms =  async (req, res) => {
                 
             });
            
-        }else if(type === 2){
+        }else if(type === 1){
             await transporter.sendMail({
                 from: `"Rescue Pets" <${EMAIL}> `,
                 to: userMail,
@@ -37,7 +37,7 @@ exports.sendEmailFormstoShelter =  async (req, res) => {
     let {type, userMail, petName} = req.body;
 
 try {
-    if(type === 1){
+    if(type === 2){
         await transporter.sendMail({
             from: `"Rescue Pets" <${EMAIL}> `,
             to: EMAIL,
@@ -47,7 +47,7 @@ try {
             
         })
     
-    }else if(type === 2){
+    }else if(type === 1){
         await transporter.sendMail({
             from: `"Rescue Pets" <${EMAIL}> `,
             to: EMAIL,
