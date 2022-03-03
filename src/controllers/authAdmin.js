@@ -27,6 +27,15 @@ exports.loginAdmin = async(req, res= response) =>{
             })
         }
 
+        console.log(User.roleId)
+
+        if(User.roleId!=3){
+            return res.status(400).json({
+                ok: false,
+                msg: 'No tiene permisos para entrar a esta pagina'
+            })
+        }
+
 
         const validPassword= bcrypt.compareSync(password,User.password)
 
@@ -57,8 +66,17 @@ exports.loginAdmin = async(req, res= response) =>{
 }
 
 exports.revalidateToken= async(req, res= response) =>{
+    
     const id= req.id
     const email= req.email
+
+    const User= await Users.findOne({
+        where:{
+            email: email
+        }
+    })
+
+
 
     const token = await generateJWT(id, email)
 
@@ -66,6 +84,7 @@ exports.revalidateToken= async(req, res= response) =>{
         ok: true,
         id,
         email,
+        role: User.roleId,
         token
     })
 }

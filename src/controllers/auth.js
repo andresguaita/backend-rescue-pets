@@ -50,7 +50,9 @@ exports.loginUser = async(req, res= response) =>{
             ok: true,
             id: User.id,
             email,
+            rol: User.roleId,
             token
+            
         })
         
     } catch (error) {
@@ -66,12 +68,20 @@ exports.revalidateToken= async(req, res= response) =>{
     const id= req.id
     const email= req.email
 
+    const User= await Users.findOne({
+        where:{
+            email: email
+        }
+    })
+
+
     const token = await generateJWT(id, email)
 
     res.json({
         ok: true,
         id,
         email,
+        role: User.roleId,
         token
     })
 }
