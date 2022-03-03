@@ -10,6 +10,6 @@ router.put('/changepassword', validateJWT ,changePassword);
 router.get('/confirm/:token', confirmAccount)
 router.get('/forgotpassword', forgotPassword)
 router.put('/resetpassword' ,resetPassword);
-router.put('/changepassword', validateJWT ,changePassword);
+
 
 module.exports = router;

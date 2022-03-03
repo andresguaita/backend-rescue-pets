@@ -14,7 +14,7 @@ async function createAdmin(req, res=response) {
         if(userRole!=3){
             return res.status(404).json({
                 ok:false,
-                msg: 'No tiene permisos para realizar esta accion'
+                msg: 'Solo los superadmin pueden crear cuentas superadmin'
             })
         }
 
@@ -45,8 +45,8 @@ async function createAdmin(req, res=response) {
 
         res.status(201).send({
             ok: true,
-           User
-            
+            msg: 'Cuenta administrativa creada con exito',
+           User           
          });
 
     } catch (error) {
