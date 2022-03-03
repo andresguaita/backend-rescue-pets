@@ -5,7 +5,7 @@ const { transporter } = require("../utils/configNodemailer")
         let {email,type} = req.body;
 
     try {
-        if(type === 1){
+        if(type === 2){
             await transporter.sendMail({
                 from: `"Rescue Pets" <${EMAIL}> `,
                 to: email,
@@ -18,7 +18,7 @@ const { transporter } = require("../utils/configNodemailer")
                 // }]
             })
             res.status(200).json("Email sent successfully");
-        }else if(type === 2){
+        }else if(type === 1){
             await transporter.sendMail({
                 from: `"Rescue Pets" <${EMAIL}> `,
                 to: email,
