@@ -4,7 +4,8 @@ exports.sendAdoption = async (req,res) => {
     try{
         let alreadyExists = await Adoptions.findOne({
             where:{
-                profileId : profileId
+                profileId : profileId,
+                petId: idpet
             }
         })
         if(idform && idpet && answer && !alreadyExists){
