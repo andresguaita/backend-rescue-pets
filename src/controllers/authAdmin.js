@@ -27,9 +27,7 @@ exports.loginAdmin = async(req, res= response) =>{
             })
         }
 
-        console.log(User.roleId)
-
-        if(User.roleId!=3){
+        if(User.roleId===1){
             return res.status(400).json({
                 ok: false,
                 msg: 'No tiene permisos para entrar a esta pagina'
