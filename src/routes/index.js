@@ -24,6 +24,7 @@ const FollowUp = require('./FollowUp')
 const Profile = require('./Profile')
 const FollowUpStatus = require('./FollowUpStatus')
 const createAdmin = require('./AdminUsers')
+const authAdmin = require('./authAdmin')
 
 router.use('/',pets)
 router.use('/',form)
@@ -33,6 +34,7 @@ router.use('/',countries)
 router.use('/',Search)
 
 router.use('/',auth)
+router.use('/',authAdmin)
 
 router.use('/',states)
 router.use('/',cities)
