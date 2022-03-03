@@ -11,7 +11,12 @@ async function createAdmin(req, res=response) {
     try {
         const { email, password, roleId, userRole } = req.body;
 
-      
+        if(userRole!=3){
+            return res.status(404).json({
+                ok:false,
+                msg: 'No tiene permisos para realizar esta accion'
+            })
+        }
 
         let User= await Users.findOne({
             where:{
