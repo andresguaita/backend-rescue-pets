@@ -5,7 +5,7 @@ exports.sendEmailAccepted =  async (req, res) => {
         let {email,type} = req.body;
 
     try {
-        if(type === 1){
+        if(type === 2){
             await transporter.sendMail({
                 from: `"Rescue Pets" <${EMAIL}> `,
                 to: email,
@@ -17,7 +17,7 @@ exports.sendEmailAccepted =  async (req, res) => {
                 //     path: "https://res.cloudinary.com/djbiam1gm/image/upload/v1645846178/shiba-inu.webp"
                 // }]
             })
-        }else if(type === 2){
+        }else if(type === 1){
             await transporter.sendMail({
                 from: `"Rescue Pets" <${EMAIL}> `,
                 to: email,
