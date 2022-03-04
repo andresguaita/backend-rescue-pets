@@ -2,9 +2,11 @@ const {Pets} = require('../db')
 
  async function editPet (req, res) {
     let {petId} = req.params;
-    let {name, sterilization, weight, description, image, speciesId, temperament, ageId, petStatusId, genreId} = req.body;
-    console.log(req.body)
-    console.log(temperament)
+    let {name, sterilization, weight, description, image, speciesId, temperament, age, petStatus, genreId} = req.body;
+    // console.log("body--------------------------------->",req.body)
+    console.log("petSatus--------------------------------->",petStatus)
+    console.log("age--------------------------------->",age)
+
 
     try {   
         await Pets.update({
@@ -15,8 +17,8 @@ const {Pets} = require('../db')
             image: image,
             speciesId: speciesId,
             temperamentId: temperament,
-            ageId: ageId,
-            petStatusId: petStatusId,
+            ageId: age,
+            petStatusId: petStatus,
             genreId: genreId
         },
             {where: 
