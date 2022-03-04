@@ -25,6 +25,7 @@ const Profile = require('./Profile')
 const FollowUpStatus = require('./FollowUpStatus')
 const createAdmin = require('./AdminUsers')
 const authAdmin = require('./authAdmin')
+const techSuport = require('./TechSupport')
 
 router.use('/',pets)
 router.use('/',form)
@@ -52,4 +53,5 @@ router.use('/',FollowUp)
 router.use('/',Profile)
 router.use('/',FollowUpStatus)
 router.use('/',createAdmin)
+router.use('/',techSuport)
 module.exports = router;
