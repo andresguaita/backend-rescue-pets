@@ -78,6 +78,7 @@ const { Genres } = sequelize.models;
 const { FollowUp } = sequelize.models;
 const { FollowUpStatus } = sequelize.models;
 const { Transaction } = sequelize.models;
+const {TechnicalSupport} = sequelize.models;
 
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
@@ -168,6 +169,9 @@ FollowUp.belongsTo(Pets);
 
 Profiles.hasMany(Adoptions);
 Profiles.hasMany(Requests);
+
+Users.hasMany(TechnicalSupport)
+TechnicalSupport.belongsTo(Users)
 
 module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
