@@ -10,6 +10,7 @@ const { getAllPetsinDB } = require("../controllers/getAllPetsinDB.js");
 const { deletePet } = require("../controllers/deletePet");
 const { editPet } = require("../controllers/editPets");
 const { hidePetInDashboard } = require("../controllers/hidePetInDashboard");
+const { updatePetStatus } = require("../controllers/updateToAdopted");
 const { getAllPetAdopted } = require("../controllers/getAllPetsAdopted.js");
 const {Shelter, Pets} = require('../db.js') 
 
@@ -58,6 +59,7 @@ router.get("/petDetail", async (req, res) => {
   router.delete("/pets/:petId", deletePet);
   router.put("/pets/:petId", editPet);
   router.put("/pets/hide/:petId", hidePetInDashboard );
+  router.put("/pets/updateStatus/:petId", updatePetStatus );
 
  
   router.get("/petAdopted/:id", getAllPetAdopted)
