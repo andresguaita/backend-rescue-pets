@@ -175,17 +175,17 @@ Users.hasMany(TechnicalSupport)
 TechnicalSupport.belongsTo(Users)
 
 // Relaciones para modelo de Tránsito
-// Profiles.hasMany(FollowUpTransit);
-// FollowUpTransit.belongsTo(Profiles);
+Profiles.hasMany(FollowUpTransit);
+FollowUpTransit.belongsTo(Profiles);
 
-// Users.hasMany(FollowUpTransit);
-// FollowUpTransit.belongsTo(Users);
+Users.hasMany(FollowUpTransit);
+FollowUpTransit.belongsTo(Users);
 
-// Requests.hasMany(FollowUpTransit);
-// FollowUpTransit.belongsTo(Requests);
+Requests.hasMany(FollowUpTransit);
+FollowUpTransit.belongsTo(Requests);
 
-// Shelter.hasMany(FollowUpTransit);
-// FollowUpTransit.belongsTo(Shelter);
+Shelter.hasMany(FollowUpTransit);
+FollowUpTransit.belongsTo(Shelter);
 
 
 
