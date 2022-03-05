@@ -210,7 +210,7 @@ exports.forgotPassword = async(req, res=response) =>{
         await transporter.sendMail({
           from: process.env.EMAIL,
           to: User.email,
-          subject: "Por favor confirme su cuenta",
+          subject: "Restablecer cuenta",
           html: `<p>Para resetear su contraseña haga click aqui <a href="${urlConfirm}">Resetear Password</a></p>`
         })
        

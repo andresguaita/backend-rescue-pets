@@ -1,5 +1,6 @@
 const { response } = require("express");
 const { Op } = require("sequelize");
+const bcrypt = require("bcrypt");
 const {
   Users,
   Shelter,
@@ -72,6 +73,39 @@ exports.updateShelter =  async(req, res= response) => {
             msg: 'Hable con el administrador'
         })
     }
+};
+
+exports.getAllShelter =  async(req, res= response) => {
+
+
+  try {
+      
+    const shelters= await Users.findAll({
+      include: [
+        {
+          model: Shelter,
+          attributes: ["name", "status"],
+        },
+
+      ],
+      where:{
+        roleId: 1
+      }
+     
+    });
+
+    res.json({
+      ok: true,
+      shelters
+    })
+
+  } catch (error) {
+      console.log(error)
+      res.status(500).json({
+          ok: false,
+          msg: 'Hable con el administrador'
+      })
+  }
 };
 
 
