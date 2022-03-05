@@ -73,10 +73,10 @@ router.get("/petDetail", async (req, res) => {
     }
   });
 
-  router.get('/petAdopted2', async (req,res)=>{
+  router.get('/petAdopted1', async (req,res)=>{
     const {count, rows} = await Pets.findAndCountAll({
           where:{
-                    petStatusId: 2
+                    petStatusId: 1
                 }
     });
     if (count){
@@ -86,10 +86,10 @@ router.get("/petDetail", async (req, res) => {
     }
   })
 
-  router.get('/petAdopted3', async (req,res)=>{
+  router.get('/petAdopted2', async (req,res)=>{
     const {count, rows} = await Pets.findAndCountAll({
           where:{
-                    petStatusId: 3
+                    petStatusId: 2
                 }
     });
     if (count){
