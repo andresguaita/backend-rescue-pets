@@ -16,7 +16,8 @@ module.exports = (sequelize) => {
         },
         hideFollowUp: {
             type:  DataTypes.BOOLEAN,
-            allowNull: true
+            allowNull: true,
+            defaultValue: false
         },
         
     },{timestamps: false})
