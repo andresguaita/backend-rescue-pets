@@ -26,7 +26,7 @@ module.exports = (sequelize) => {
     },
     hideFromDash: {
         type: DataTypes.BOOLEAN,
-        allowNull: true
+        allowNull: false
     },
     }
     );
