@@ -1,11 +1,11 @@
 const { DataTypes } = require('sequelize');
 
-// module.exports = (sequelize) => {
-//     sequelize.define ('followUpTransit',{
-//         petsAssigned: {
-//             type:  DataTypes.JSON,
-//             allowNull: true
-//         },
+module.exports = (sequelize) => {
+    sequelize.define ('followUpTransit',{
+        petsAssigned: {
+            type:  DataTypes.JSON,
+            allowNull: true
+        },
         
-//     },{timestamps: false})
-// };
+    },{timestamps: false})
+};

@@ -79,7 +79,7 @@ const { FollowUp } = sequelize.models;
 const { FollowUpStatus } = sequelize.models;
 const { Transaction } = sequelize.models;
 const {TechnicalSupport} = sequelize.models;
-// const {FollowUpTransit} = sequelize.models;
+const {FollowUpTransit} = sequelize.models;
 
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
