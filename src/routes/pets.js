@@ -12,7 +12,9 @@ const { editPet } = require("../controllers/editPets");
 const { hidePetInDashboard } = require("../controllers/hidePetInDashboard");
 const { updatePetStatus } = require("../controllers/updateToAdopted");
 const { getAllPetAdopted } = require("../controllers/getAllPetsAdopted.js");
+const {editPetFromAdmin} = require("../controllers/editPetFromAdmin.js")
 const {Shelter, Pets} = require('../db.js') 
+
 
 router.get("/pets/:idCity", getPets);
 
@@ -55,7 +57,7 @@ router.get("/petDetail", async (req, res) => {
 
 
   
-
+  router.put("/pets/editPetFromAdmin", editPetFromAdmin)
   router.delete("/pets/:petId", deletePet);
   router.put("/pets/:petId", editPet);
   router.put("/pets/hide/:petId", hidePetInDashboard );
