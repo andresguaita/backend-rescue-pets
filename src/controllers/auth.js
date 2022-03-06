@@ -272,3 +272,45 @@ exports.resetPassword = async( req, res= response) =>{
         })
     }
 }
+
+exports.checkUserGoogle = async(req, res=response) =>{
+    try {
+        
+        const {email} = req.body
+
+        const User= await Users.findOne({
+            where:{
+                email: email
+            }
+        })
+
+        if(!User){
+            return res.status(400).json({
+                ok: false,
+                msg: `No existe un usuario con el email ${email}, lo invitamos a realizar el registro.`
+            })
+        }
+
+        if(!User.isVerified){
+            return res.status(400).json({
+                ok: false,
+                msg: 'Por favor revise su email y culmine el registro.'
+            })
+        }
+
+        const token = await generateJWT(User.id, User.email)
+
+        res.json({
+            ok: true,
+            id: User.id,
+            email,
+            rol: User.roleId,
+            token
+            
+        })
+
+
+    } catch (error) {
+        console.log(error)
+    }
+}
