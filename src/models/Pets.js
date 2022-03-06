@@ -1,4 +1,4 @@
-const { DataTypes }= require('sequelize');
+const { DataTypes, Sequelize }= require('sequelize');
 
 module.exports = (sequelize) => {
 
@@ -21,7 +21,7 @@ module.exports = (sequelize) => {
     }
     ,
     image: {
-        type: DataTypes.STRING,
+        type: DataTypes.ARRAY(Sequelize.TEXT),
         allowNull: false,
     },
     hideFromDash: {
