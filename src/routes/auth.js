@@ -1,10 +1,11 @@
 const {Router} = require('express');
-const { loginUser, revalidateToken, changePassword, confirmAccount, forgotPassword, resetPassword } = require('../controllers/auth');
+const { loginUser, revalidateToken, changePassword, confirmAccount, forgotPassword, resetPassword, checkUserGoogle } = require('../controllers/auth');
 const { validateJWT } = require('../middleware/validate-token');
 const router = Router();
 
 
 router.post('/login', loginUser);
+router.post('/loginGoogle', checkUserGoogle);
 router.get('/renew', validateJWT ,revalidateToken);
 router.put('/changepassword', validateJWT ,changePassword);
 router.get('/confirm/:token', confirmAccount)
