@@ -43,11 +43,11 @@ async function putSupport (req, res) {
             {where: 
             {id: idSuport}
         });
-        res.status(200).json("Support edited");
+        res.status(200).json({msg:"Support edited"});
         
     } catch (error) {
         console.log(error);
-        res.json(error);
+        res.json({msg:"No se ha podido editar ticket"});
     }   
 };
 
