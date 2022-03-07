@@ -22,7 +22,7 @@ const {Pets,Shelter,Age, Temperament,
             },
             {
               model: PetStatus,
-              attributes: ["status"],
+              attributes: ["id","status"],
             },
             {
               model: Shelter,
