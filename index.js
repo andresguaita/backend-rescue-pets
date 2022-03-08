@@ -27,7 +27,7 @@ conn.sync({ force: false }).then(() => {
     await setQuestions()
     await setFormType()
     await followUpStatus()
-    // await setCountries()
+    await setCountries()
     // await setStates()
     // await setCities()
 
