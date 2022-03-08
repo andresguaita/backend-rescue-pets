@@ -89,23 +89,20 @@ async function createShelter(req, res) {
 //      });
 //   };
 
-const getAllShelters = async () => {
-  return await Shelter.findAll({  
-    include: [
-      {
-        model: Cities,
+const getAllSheltersPaises = async () => {
+    return await Shelter.findAll({  
         include: {
-            model: States,
-            include: Countries
-        }
-      },
-      {
-        model: Users,
-        attributes: ["email"]
-      }
-    ]
-     });
-  };
+         model: Cities,
+         include: {
+             model: States,
+             attributes: ["countryId"],
+             include: {model: Countries, attributes:["id","country"]} 
+         },
+          attributes:["stateId"],
+       }, attributes:["id","name"]
+      });
+   };
 
-module.exports = { createShelter, getAllShelters };
+  
 
+module.exports = { createShelter, getAllShelters, getAllSheltersPaises };
