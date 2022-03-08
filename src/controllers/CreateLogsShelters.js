@@ -63,4 +63,43 @@ async function createShelter(req, res) {
     }
 
   } 
+  const getAllShelters = async () => {
+    return await Shelter.findAll({  
+      include: {
+          model: Cities,
+          include: {
+              model: States,
+              include: Countries
+          }
+        }
+       });
+    };
 
+// const getAllSheltersPaises = async () => {
+//    return await Shelter.findAll({  
+//        include: {
+//         model: Cities,
+//         include: {
+//             model: States,
+//             attributes: ["countryId"],
+//             include: {model: Countries, attributes:["id","country"]} 
+//         },
+//          attributes:["stateId"],
+//       }, attributes:[]
+//      });
+//   };
+
+const getAllSheltersPaises = async () => {
+    return await Shelter.findAll({  
+        include: {
+         model: Cities,
+         include: {
+             model: States,
+             attributes: ["countryId"],
+             include: {model: Countries, attributes:["id","country"]} 
+         },
+          attributes:["stateId"],
+       }, attributes:["id","name"]
+      });
+   };
+   module.exports = { createShelter, getAllShelters, getAllSheltersPaises };
