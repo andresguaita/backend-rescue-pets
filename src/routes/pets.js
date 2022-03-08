@@ -14,7 +14,7 @@ const { updatePetStatus } = require("../controllers/updateToAdopted");
 const { getAllPetAdopted } = require("../controllers/getAllPetsAdopted.js");
 const {editPetFromAdmin} = require("../controllers/editPetFromAdmin.js")
 const {Shelter, Pets} = require('../db.js') 
-
+const sequelize = require('sequelize')
 
 router.get("/pets/:idCity", getPets);
 
@@ -89,16 +89,35 @@ router.get("/petDetail", async (req, res) => {
   })
 
   router.get('/petAdopted2', async (req,res)=>{
-    const {count, rows} = await Pets.findAndCountAll({
-          where:{
-                    petStatusId: 2
-                }
-    });
-    if (count){
-      res.status(200).send({count})
+    const shelterAdop= await Pets.findAll({
+      where:{
+        petStatusId: 2
+    }, 
+     attributes: [
+        [sequelize.literal(`("shelterId")`), 'shelterId'],
+        [sequelize.literal(`COUNT(*)`), 'count'],   
+    ],
+    group: ['shelterId'],
+    
+       });
+    if (shelterAdop){
+      res.status(200).send(shelterAdop)
     } else {
-        res.status(400).json('Sorry, there is no Adoptados')
+        res.status(400).json('Sorry, there is no Dats')
     }
   })
+
+  // router.get('/petAdopted2', async (req,res)=>{
+  //   const {count, rows} = await Pets.findAndCountAll({
+  //         where:{
+  //                   petStatusId: 2
+  //               }
+  //   });
+  //   if (count){
+  //     res.status(200).send({count})
+  //   } else {
+  //       res.status(400).json('Sorry, there is no Adoptados')
+  //   }
+  // })
 
 module.exports = router;

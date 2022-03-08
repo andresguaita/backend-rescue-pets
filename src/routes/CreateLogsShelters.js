@@ -5,6 +5,7 @@ const router = Router();
 const {
   createShelter,
   getAllShelters,
+  getAllSheltersPaises
 } = require("../controllers/CreateLogsShelters");
 router.post(
   "/createShelter",
@@ -47,6 +48,24 @@ router.get("/shelters/:id", async (req, res) => {
     shelterId.length
       ? res.status(200).json(shelterId[0])
       : res.status(404).send("Shelter Not Found");
+  }
+});
+
+router.get("/sheltersCountry", async (req, res) => {
+  const { name } = req.query;
+  let allShelters = await getAllSheltersPaises();
+  if (name) {
+    let sheltersByName = await getAllSheltersPaises();
+    let foundSheltersDB = sheltersByName.filter((el) =>
+      el.name.toLowerCase().includes(name.toLocaleLowerCase())
+    );
+    if (foundSheltersDB.length > 0) {
+      res.status(200).send(foundSheltersDB);
+    } else {
+      res.status(400).json("Sorry, Shelter not found");
+    }
+  } else {
+    res.status(200).send(allShelters);
   }
 });
 
