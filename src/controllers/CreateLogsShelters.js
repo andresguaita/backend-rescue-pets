@@ -65,6 +65,7 @@ async function createShelter(req, res) {
   } 
 
 
+
 const getAllShelters = async () => {
   return await Shelter.findAll({  
     include: [
@@ -84,3 +85,4 @@ const getAllShelters = async () => {
   };
 
 module.exports = { createShelter, getAllShelters };
+
