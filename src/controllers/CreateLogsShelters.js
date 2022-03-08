@@ -89,7 +89,7 @@ const getAllShelters = async () => {
       },
     ],
   });
-};
+}; 
 
 const getAllSheltersPaises = async () => {
   return await Shelter.findAll({
