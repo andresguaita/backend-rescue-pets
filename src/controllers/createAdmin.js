@@ -126,7 +126,80 @@ async function createAdmin(req, res=response) {
     }
   };
 
+
+
+
+
+const getAllAdmin =  async(req, res= response) => {
+
+    
+
+    try {
+        let allAdmin = await Users.findAll({
+            where: {
+                roleId: [2,3]
+            }
+        })
+
+        res.json({
+            ok:true,
+            allAdmin
+        })
+        
+    } catch (error) {
+        console.log(error)
+    }
+    
+}
+
+const deleteAdmin =  async(req, res= response) => {
+
+    const {id} = req.params
+    const Userid= req.id
+    
+
+   
+
+    try {
+        let User = await Users.findOne({
+            where: {
+                id: id
+            }
+        })
+
+        let UserRole = await Users.findOne({
+            where: {
+                id: Userid
+            }
+        })
+        
+        if(UserRole.roleId!=3){
+
+          return  res.json({
+                ok: false,
+                msg: 'Usted no tiene permiso para realizar esta accion'
+            })
+           
+        }
+        
+          await User.destroy();
+          return res.json({
+            ok:true,
+            msg: 'Cuenta administrativa eliminada exitosamente'
+        })
+        
+    } catch (error) {
+        console.log(error)
+    }
+    
+}
+      
+
+
+
 module.exports = {
     createAdmin,
-    editShelter
+    editShelter,
+    getAllAdmin,
+    deleteAdmin
 }
