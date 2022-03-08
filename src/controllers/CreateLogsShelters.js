@@ -67,13 +67,19 @@ async function createShelter(req, res) {
 
 const getAllShelters = async () => {
   return await Shelter.findAll({  
-    include: {
+    include: [
+      {
         model: Cities,
         include: {
             model: States,
             include: Countries
         }
+      },
+      {
+        model: Users,
+        attributes: (["email"])
       }
+    ]
      });
   };
 
