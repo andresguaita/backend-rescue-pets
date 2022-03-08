@@ -64,23 +64,3 @@ async function createShelter(req, res) {
 
   } 
 
-
-const getAllShelters = async () => {
-  return await Shelter.findAll({  
-    include: [
-      {
-        model: Cities,
-        include: {
-            model: States,
-            include: Countries
-        }
-      },
-      {
-        model: Users,
-        attributes: (["email"])
-      }
-    ]
-     });
-  };
-
-module.exports = { createShelter, getAllShelters };
