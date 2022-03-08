@@ -80,7 +80,7 @@ const { FollowUpStatus } = sequelize.models;
 const { Transaction } = sequelize.models;
 const {TechnicalSupport} = sequelize.models;
 const {FollowUpTransit} = sequelize.models;
-
+const {Alerts } =sequelize.models;
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
 
@@ -140,6 +140,10 @@ Shelter.belongsTo(Users);
 
 Shelter.hasMany(Forms);
 Forms.belongsTo(Shelter);
+
+Shelter.hasMany(Alerts);
+Alerts.belongsTo(Shelter);
+
 
 Adoptions.belongsTo(Pets);
 Pets.hasMany(Adoptions);
