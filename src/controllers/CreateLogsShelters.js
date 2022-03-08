@@ -77,7 +77,7 @@ const getAllShelters = async () => {
       },
       {
         model: Users,
-        attributes: (["email"])
+        attributes: ["email"]
       }
     ]
      });
