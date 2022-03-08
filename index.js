@@ -15,23 +15,19 @@ const { followUpStatus } = require("./helpers/followUpStatus");
 
 // Syncing all the models at once.
 conn.sync({ force: false }).then(() => {
-
-  
-  server.listen(process.env.PORT || 3001, async() => {
-    await setTemperaments()
-    await setRoles()
-    await setSpecies()
-    await setAge()
-    await setPetStatus()
-    await setGenre()
-    await setQuestions()
-    await setFormType()
-    await followUpStatus()
-    // await setCountries()
+  server.listen(process.env.PORT || 3001, async () => {
+    await setTemperaments();
+    await setRoles();
+    await setSpecies();
+    await setAge();
+    await setPetStatus();
+    await setGenre();
+    await setQuestions();
+    await setFormType();
+    await followUpStatus();
+    await setCountries();
     // await setStates()
     // await setCities()
-
-
 
     console.log(`Listen in ${process.env.PORT || 3001}`); // eslint-disable-line no-console
   });

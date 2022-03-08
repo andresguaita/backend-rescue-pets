@@ -14,7 +14,7 @@ const {Pets} = require('../db')
             sterilization: sterilization,
             weight: weight,
             description: description,
-            // image: image,
+            image: image,
             speciesId: speciesId,
             temperamentId: temperament,
             ageId: age,

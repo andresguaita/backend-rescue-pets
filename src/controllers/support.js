@@ -1,8 +1,13 @@
-const {TechnicalSupport} = require('../db')
+const {TechnicalSupport, Users} = require('../db')
 
  async function getSupport (req, res) {
     try {
-        const allSupport =  await TechnicalSupport.findAll();
+        const allSupport =  await TechnicalSupport.findAll({
+            include:{
+                model: Users,
+                attributes:["email"]
+            }
+        });
         allSupport.length !== 0 ?
         res.status(200).json(allSupport)
         : res.status(400).json('No hay pedidos de soporte') 

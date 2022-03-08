@@ -26,7 +26,12 @@ module.exports = (sequelize) => {
     },
     hideFromDash: {
         type: DataTypes.BOOLEAN,
-        allowNull: false,
+        allowNull: true,
+        defaultValue: false
+    },
+    inTransit: {
+        type: DataTypes.BOOLEAN,
+        allowNull: true,
         defaultValue: false
     },
     }

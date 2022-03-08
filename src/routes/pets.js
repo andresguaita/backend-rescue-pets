@@ -14,7 +14,10 @@ const { updatePetStatus } = require("../controllers/updateToAdopted");
 const { getAllPetAdopted } = require("../controllers/getAllPetsAdopted.js");
 const {editPetFromAdmin} = require("../controllers/editPetFromAdmin.js")
 const {Shelter, Pets} = require('../db.js') 
-const sequelize = require('sequelize')
+
+const {editPetInTransitStatus} = require("../controllers/editPetInTransitStatus")
+
+
 
 router.get("/pets/:idCity", getPets);
 
@@ -62,6 +65,7 @@ router.get("/petDetail", async (req, res) => {
   router.put("/pets/:petId", editPet);
   router.put("/pets/hide/:petId", hidePetInDashboard );
   router.put("/pets/updateStatus/:petId", updatePetStatus );
+  router.put("/pets/updateTransitStatus/:status", editPetInTransitStatus );
 
  
   router.get("/petAdopted/:id", getAllPetAdopted)
