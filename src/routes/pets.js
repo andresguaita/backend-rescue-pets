@@ -14,7 +14,7 @@ const { updatePetStatus } = require("../controllers/updateToAdopted");
 const { getAllPetAdopted } = require("../controllers/getAllPetsAdopted.js");
 const {editPetFromAdmin} = require("../controllers/editPetFromAdmin.js")
 const {Shelter, Pets} = require('../db.js') 
-
+const sequelize = require('sequelize')
 const {editPetInTransitStatus} = require("../controllers/editPetInTransitStatus")
 
 
