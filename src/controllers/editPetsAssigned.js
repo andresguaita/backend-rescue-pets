@@ -17,16 +17,32 @@ const { FollowUpTransit } = require('../db')
         console.log("edited.petsAssigned--------------------------->",edited.petsAssigned)
         const resultado = edited.petsAssigned.filter(el => el.id !==  data[0].id)
         console.log("resultado--------------------------->", resultado)
+        console.log("resultado.length--------------------------->", resultado.length)
 
-        const update = await FollowUpTransit.update({
-            petsAssigned: resultado,
-        },
-        {where: 
-            {id: editableTransitId}
-        })
-
-
-        res.status(200).json(update);
+        if(resultado.length === 0){
+            console.log("flag 1",resultado.length)
+            const update = await FollowUpTransit.update({
+                petsAssigned: "empty",
+            },
+            {where: 
+                {id: editableTransitId}
+            })
+    
+    
+            return res.status(200).json(update);
+            console.log
+        } else {
+            console.log("flag 2")
+            const update2 = await FollowUpTransit.update({
+                petsAssigned: resultado,
+            },
+            {where: 
+                {id: editableTransitId}
+            })
+    
+    
+            res.status(200).json(update2);
+        }
         
     } catch (error) {
         console.log(error);
