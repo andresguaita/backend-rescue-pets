@@ -34,13 +34,13 @@ exports.sendEmailForms =  async (req, res) => {
 };
 
 exports.sendEmailFormstoShelter =  async (req, res) => {
-    let {type, userMail, petName} = req.body;
+    let {type, userMail, petName, shelterMail} = req.body;
 
 try {
     if(type === 2){
         await transporter.sendMail({
             from: `"Rescue Pets" <${EMAIL}> `,
-            to: EMAIL,
+            to: shelterMail,
             subject: `Solicitud de adopción para ${petName}`,
             text: `Has recibido una nueva solicitud para adoptar a ${petName} de parte de ${userMail}. Chequea las respuesta del formulario en el dashboard`,
             html: `</p>Has recibido una nueva solicitud para adoptar a ${petName} de parte de ${userMail}. Chequea las respuesta del formulario en el dashboard</p>`,
@@ -50,7 +50,7 @@ try {
     }else if(type === 1){
         await transporter.sendMail({
             from: `"Rescue Pets" <${EMAIL}> `,
-            to: EMAIL,
+            to: shelterMail,
             subject: `Nueva solicitud de tránsito`,
             text: `Has recibido una nueva solicitud de tránsito de parte de ${userMail}. Chequea las respuesta del formulario en el dashboard`,
             html: `<p>Has recibido una nueva solicitud de tránsito de parte de ${userMail}. Chequea las respuesta del formulario en el dashboard</p>`,

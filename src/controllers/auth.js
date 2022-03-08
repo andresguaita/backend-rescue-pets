@@ -68,6 +68,8 @@ exports.revalidateToken= async(req, res= response) =>{
     const id= req.id
     const email= req.email
 
+    console.log(email)
+
     const User= await Users.findOne({
         where:{
             email: email
