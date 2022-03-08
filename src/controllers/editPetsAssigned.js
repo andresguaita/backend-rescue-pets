@@ -4,8 +4,8 @@ const { FollowUpTransit } = require('../db')
     let {editableTransitId} = req.params; // transitId = 1
     let {data} = req.body;  //  [{id: 5, name: 'Nuky'}]
     // console.log("body-------------------->",req.body)
-    console.log("data----------------------->", data)
-    console.log("data.id----------------------->", data[0].id)
+    // console.log("data----------------------->", data)
+    // console.log("data.id----------------------->", data[0].id)
 
     try {   
         const edited = await FollowUpTransit.findOne({
@@ -14,13 +14,13 @@ const { FollowUpTransit } = require('../db')
             {id: editableTransitId}
 
         })
-        console.log("edited.petsAssigned--------------------------->",edited.petsAssigned)
+        // console.log("edited.petsAssigned--------------------------->",edited.petsAssigned)
         const resultado = edited.petsAssigned.filter(el => el.id !==  data[0].id)
-        console.log("resultado--------------------------->", resultado)
-        console.log("resultado.length--------------------------->", resultado.length)
+        // console.log("resultado--------------------------->", resultado)
+        // console.log("resultado.length--------------------------->", resultado.length)
 
         if(resultado.length === 0){
-            console.log("flag 1",resultado.length)
+            // console.log("flag 1",resultado.length)
             const update = await FollowUpTransit.update({
                 petsAssigned: "empty",
             },
@@ -30,9 +30,9 @@ const { FollowUpTransit } = require('../db')
     
     
             return res.status(200).json(update);
-            console.log
+            
         } else {
-            console.log("flag 2")
+            // console.log("flag 2")
             const update2 = await FollowUpTransit.update({
                 petsAssigned: resultado,
             },
