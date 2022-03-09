@@ -5,6 +5,10 @@ const feedback = async (req, res) => {
   const ref = req.query.external_reference;
   const shelterId = ref.split("_");
 
+  let redirect =
+    shelterId.length < 3
+      ? `http://localhost:3000/shelters/${shelterId[1]}`
+      : `http://localhost:3000/details/${shelterId[2]}`;
   try {
     const shelter = await Shelter.findByPk(shelterId[1]);
     let transaction;
@@ -32,7 +36,7 @@ const feedback = async (req, res) => {
       state: transaction.status,
     });
 
-    res.status(200).redirect(`http://localhost:3000/details/${shelterId[2]}`);
+    res.status(200).redirect(redirect);
   } catch (error) {
     console.log(error);
   }
