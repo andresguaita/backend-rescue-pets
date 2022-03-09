@@ -22,7 +22,7 @@ const { FollowUpTransit } = require('../db')
         if(resultado.length === 0){
             // console.log("flag 1",resultado.length)
             const update = await FollowUpTransit.update({
-                petsAssigned: "empty",
+                petsAssigned: null,
             },
             {where: 
                 {id: editableTransitId}
