@@ -6,10 +6,10 @@ exports.createAlert = async (req,res) => {
     try{
 if(direction && description & shelterId &&image){
     let ca= await Alerts.create({
-        direction,
-        image,
-        description,
-        shelterId
+        direction:direction,
+        image:image,
+        description:description,
+        shelterId:shelterId
        
     })
      return res.json({
