@@ -6,8 +6,12 @@ const { Transaction, Shelter } = require("../db");
 const { APIGATEWAY_URL } = process.env;
 
 const postPreferences = async (req, res) => {
-  const { shelterId, petId } = req.body;
+  const { shelterId } = req.body;
 
+  console.log(req.body);
+  let external = req.body.petId
+    ? `shelter_${shelterId}_${req.body.petId}`
+    : `shelter_${shelterId}`;
   try {
     const shelter = await Shelter.findByPk(shelterId);
 
@@ -30,7 +34,7 @@ const postPreferences = async (req, res) => {
         failure: `${APIGATEWAY_URL}/donaciones/feedback`,
         pending: `${APIGATEWAY_URL}/donaciones/feedback`,
       },
-      external_reference: `shelter_${shelterId}_${petId}`,
+      external_reference: external,
       // auto_return: "approved",
     };
 
