@@ -1,4 +1,4 @@
-const { Shelter, Users, Cities, Countries, Roles, States } = require("../db");
+const { Shelter, Users, Transaction} = require("../db");
 const { Op } = require("sequelize");
 const bcrypt = require("bcrypt");
 var sequelize = require("sequelize");
@@ -193,6 +193,29 @@ const deleteAdmin =  async(req, res= response) => {
     }
     
 }
+
+const getAllDonations =  async(req, res= response) => {
+
+    try {
+        let allDonations = await Transaction.findAll({
+            include: [
+                {
+                  model: Shelter,
+                  attributes: ["name"],
+                },
+              ],
+        })
+
+        res.json({
+            ok:true,
+            allDonations
+        })
+        
+    } catch (error) {
+        console.log(error)
+    }
+    
+}
       
 
 
@@ -201,5 +224,6 @@ module.exports = {
     createAdmin,
     editShelter,
     getAllAdmin,
-    deleteAdmin
+    deleteAdmin,
+    getAllDonations
 }
