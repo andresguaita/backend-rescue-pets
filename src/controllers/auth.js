@@ -194,7 +194,7 @@ exports.confirmAccount = async(req, res= response) =>{
     });
 
 
-    return res.redirect('http://localhost:3000/confirmaccount')
+    return res.redirect(`${process.env.URL_FRONT}/confirmaccount`)
 
         
     } catch (error) {
@@ -221,7 +221,7 @@ exports.forgotPassword = async(req, res=response) =>{
 
         const token = await generateJWT(User.id, User.email)
 
-        const urlConfirm = `http://localhost:3000/resetpassword/${token}`
+        const urlConfirm = `${process.env.URL_FRONT}/resetpassword/${token}`
 
         await transporter.sendMail({
           from: process.env.EMAIL,
