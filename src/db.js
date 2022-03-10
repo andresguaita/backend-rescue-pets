@@ -2,7 +2,7 @@ require("dotenv").config();
 const { Sequelize } = require("sequelize");
 const fs = require("fs");
 const path = require("path");
-const { DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DATABASE_URL, NODE_ENV } =
+const { DB_NAME, DB_USER, DB_PASSWORD, DB_HOST, DATABASE_URL, NODE_ENV, HEROKU_POSTGRESQL_COPPER_URL } =
   process.env;
 
 let sequelize;
@@ -15,7 +15,7 @@ if (NODE_ENV === "local") {
     }
   );
 } else {
-  sequelize = new Sequelize(`${DATABASE_URL}`, {
+  sequelize = new Sequelize(`${HEROKU_POSTGRESQL_COPPER_URL}`, {
     dialectOptions: {
       ssl: {
         require: true,
