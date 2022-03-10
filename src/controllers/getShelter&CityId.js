@@ -12,7 +12,8 @@ async function getShelterAndCityId (req, res) {
 
         const filteredData =  {
             shelterId: getShelter.id,
-            cityId: getShelter.cityId
+            cityId: getShelter.cityId,
+            shelterName: getShelter.name
         }
 
         console.log(getShelter)
