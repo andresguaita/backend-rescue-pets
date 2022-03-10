@@ -6,6 +6,7 @@ const {
   Species,
   PetStatus,
   Vaccines,
+  Users
 } = require("../db.js");
 
 const getAllPetsinDB = async () => {
@@ -33,7 +34,11 @@ const getAllPetsinDB = async () => {
       },
       {
         model: Shelter,
-        attributes: ["name", "token"],
+        attributes: ["name", "token", "userId"],
+        include: {
+          model: Users,
+          attributes: ["email"]
+        },
       },
     ],
   });

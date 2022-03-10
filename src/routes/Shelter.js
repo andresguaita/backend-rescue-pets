@@ -3,6 +3,8 @@ const { getAllShelterInDB } = require('../controllers/getAllShelterInDB');
 const { getSheltersById, updateShelter, getAllShelter } = require('../controllers/getShelter');
 const { validateJWT } = require('../middleware/validate-token');
 const {createAlert }= require('../controllers/createAlert');
+const {getAlerts }= require('../controllers/getAlerts');
+const {deleteAlert}=require('../controllers/deleteAlert');
 const router = express.Router()
 
 
@@ -11,7 +13,8 @@ router.get('/Shelter/:id', validateJWT,getSheltersById );
 router.put('/Shelter/:id',validateJWT ,updateShelter );
 router.get('/getAllShelter' ,getAllShelter );
 router.post('/ShelterAlert',createAlert),
-
+router.get('/getAlerts' ,getAlerts );
+router.delete('/deleteAlert/:id', deleteAlert)
 
 router.get("/shelters", async (req, res) => {
 

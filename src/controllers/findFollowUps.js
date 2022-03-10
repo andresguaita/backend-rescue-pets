@@ -2,7 +2,7 @@ const {FollowUp, FollowUpStatus, Profiles, Pets, Users } = require('../db')
 const {sendEmailReminder} = require('../controllers/sendEmailReminder')
 
  async function findFollowUp (req, res) {
-    let {followUpId} = req.body;
+    let {followUpId, date} = req.body;
     try {   
         const foundFollowUp = await FollowUp.findOne({
             where: {
@@ -18,20 +18,20 @@ const {sendEmailReminder} = require('../controllers/sendEmailReminder')
             phoneNumber: foundFollowUp.profile.phoneNumber
         }
         
-        const date1 = foundFollowUp.followUpDate1
-        const date2 = foundFollowUp.followUpDate2
-        const date3 = foundFollowUp.followUpDate3
+        // const date1 = foundFollowUp.followUpDate1
+        // const date2 = foundFollowUp.followUpDate2
+        // const date3 = foundFollowUp.followUpDate3
 
 
-        if(date1 && date2 && date3){
-            await sendEmailReminder(data)
+        // if(date1 && date2 && date3){
+            await sendEmailReminder(data, date)
 
 
-            res.status(200).json('Existen tres fechas');  
-        } 
-        else if(date1 && date2) res.status(200).json('Existen dos fechas');
-        else if(date1) res.status(200).json('Existe una fecha');
-        else res.status(200).json('No hay fechas registradas');
+            res.status(200).json('Email reminder sent successfully');  
+        // } 
+        // else if(date1 && date2) res.status(200).json('Existen dos fechas');
+        // else if(date1) res.status(200).json('Existe una fecha');
+        // else res.status(200).json('No hay fechas registradas');
 
         // res.status(200).json(date3);
         

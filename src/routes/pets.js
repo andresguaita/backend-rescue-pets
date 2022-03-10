@@ -92,6 +92,19 @@ router.get("/petDetail", async (req, res) => {
     }
   })
 
+  router.get('/petAdopted11', async (req,res)=>{
+    const {count, rows} = await Pets.findAndCountAll({
+          where:{
+                    petStatusId: 2
+                }
+    });
+    if (count){
+      res.status(200).send({count})
+    } else {
+        res.status(400).json('Sorry, there is no Adoptados')
+    }
+  })
+
   router.get('/petAdopted2', async (req,res)=>{
     const shelterAdop= await Pets.findAll({
       where:{
