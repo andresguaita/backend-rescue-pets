@@ -2,7 +2,7 @@ const { EMAIL } = process.env;
 const { transporter } = require("../utils/configNodemailer")
 
  async function sendEmailRejected (req, res) {
-        let {email,type} = req.body;
+        let {email,type,humaname} = req.body;
 
     try {
         if(type === 2){
@@ -10,8 +10,8 @@ const { transporter } = require("../utils/configNodemailer")
                 from: `"Rescue Pets" <${EMAIL}> `,
                 to: email,
                 subject: "Solicitud de adopción",
-                text: "Lamentamos decirte que no cumples con los requerimientos de la solicitud de adopción, por lo tanto no has sido aceptado.",
-                html: `<p>Lamentamos decirte que no cumples con los requerimientos de la solicitud de adopción, por lo tanto no has sido aceptado.</p>`,
+                text:  `${humaname} Lamentamos decirte que no cumples con los requerimientos de la solicitud de adopción, por lo tanto no has sido aceptado.`,
+                html: `<p> ${humaname} Lamentamos decirte que no cumples con los requerimientos de la solicitud de adopción, por lo tanto no has sido aceptado.</p>`,
                 // attachments: [{
                 //     filename: "shiba-inu.webp",
                 //     path: "https://res.cloudinary.com/djbiam1gm/image/upload/v1645846178/shiba-inu.webp"
@@ -23,8 +23,8 @@ const { transporter } = require("../utils/configNodemailer")
                 from: `"Rescue Pets" <${EMAIL}> `,
                 to: email,
                 subject: "Solicitud de tránsito",
-                text: "Lamentamos decirte que no cumples con los requerimientos de la solicitud de tránsito, por lo tanto no has sido aceptado.",
-                html: `<p>Lamentamos decirte que no cumples con los requerimientos de la solicitud de tránsito, por lo tanto no has sido aceptado.</p>`,
+                text:  `${humaname} lamentamos decirte que no cumples con los requerimientos de la solicitud de tránsito, por lo tanto no has sido aceptado.`,
+                html: `<p> ${humaname} lamentamos decirte que no cumples con los requerimientos de la solicitud de tránsito, por lo tanto no has sido aceptado.</p>`,
                 // attachments: [{
                 //     filename: "shiba-inu.webp",
                 //     path: "https://res.cloudinary.com/djbiam1gm/image/upload/v1645846178/shiba-inu.webp"
