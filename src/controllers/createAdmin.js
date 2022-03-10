@@ -100,7 +100,7 @@ async function createAdmin(req, res=response) {
 
         const token = await generateJWT(User.id, User.email)
 
-        const urlConfirm = `http://localhost:3000/resetpassword/${token}`
+        const urlConfirm = `${process.env.URL_FRONT}/resetpassword/${token}`
 
         await transporter.sendMail({
           from: process.env.EMAIL,
