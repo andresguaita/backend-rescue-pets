@@ -1,4 +1,4 @@
-const { Users } = require("../db");
+const { Shelter, Users, Transaction} = require("../db");
 const { Op } = require("sequelize");
 const bcrypt = require("bcrypt");
 const { generateJWT } = require("../../helpers/jwt");
@@ -35,6 +35,20 @@ exports.loginUser = async(req, res= response) =>{
             })
         }
 
+        const shelter= await Shelter.findOne({
+            where:{
+                id: User.id
+            }
+        })
+        
+        if(!shelter.status){
+
+            res.json({
+                ok: false,
+                msg: 'Su cuenta ha sido suspendida, comuníquese con el adminsitrador'
+            })
+        }
+
         const validPassword= bcrypt.compareSync(password,User.password)
 
         if(!validPassword){
@@ -68,7 +82,7 @@ exports.revalidateToken= async(req, res= response) =>{
     const id= req.id
     const email= req.email
 
-    console.log(email)
+    
 
     const User= await Users.findOne({
         where:{
@@ -297,6 +311,20 @@ exports.checkUserGoogle = async(req, res=response) =>{
             return res.status(400).json({
                 ok: false,
                 msg: 'Por favor revise su email y culmine el registro.'
+            })
+        }
+
+        const shelter= await Shelter.findOne({
+            where:{
+                id: User.id
+            }
+        })
+        
+        if(!shelter.status){
+
+            res.json({
+                ok: false,
+                msg: 'Su cuenta ha sido suspendida, comuníquese con el adminsitrador'
             })
         }
 
