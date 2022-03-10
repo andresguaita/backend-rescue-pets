@@ -4,21 +4,10 @@ const { Alerts} = require('../db')
     const { id } = req.params;
 
     try {
-        const alert = await Alerts.findAll({
-            where: {
-                id: id
-            }
-        })
-        if (alert) {
-            Alerts.destroy({
-                where: {
-                    id: id
-                }
-            })
-            return res.status(200)
-        } else {
-            return res.status(404).send("error")
-        }
+        const alert = await Alerts.findByPk(id)
+        console.log(alert)
+        await alert.destroy().then(() => res.status(200).send("Ok")).catch(()=> res.status(400))
+     
 
     } catch (error) {
         console.log(error)
