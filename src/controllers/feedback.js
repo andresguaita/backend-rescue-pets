@@ -1,5 +1,8 @@
+require("dotenv").config();
+
 const axios = require("axios");
 const { Transaction, Shelter } = require("../db");
+const { URL_FRONT } = process.env;
 
 const feedback = async (req, res) => {
   const ref = req.query.external_reference;
@@ -7,8 +10,8 @@ const feedback = async (req, res) => {
 
   let redirect =
     shelterId.length < 3
-      ? `http://localhost:3000/shelters/${shelterId[1]}`
-      : `http://localhost:3000/details/${shelterId[2]}`;
+      ? `${URL_FRONT}/shelters/${shelterId[1]}`
+      : `${URL_FRONT}/details/${shelterId[2]}`;
   try {
     const shelter = await Shelter.findByPk(shelterId[1]);
     let transaction;
