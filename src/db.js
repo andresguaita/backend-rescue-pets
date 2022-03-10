@@ -15,7 +15,7 @@ if (NODE_ENV === "local") {
     }
   );
 } else {
-  sequelize = new Sequelize(`${HEROKU_POSTGRESQL_COPPER_URL}`, {
+  sequelize = new Sequelize(`${DATABASE_URL}`, {
     dialectOptions: {
       ssl: {
         require: true,
